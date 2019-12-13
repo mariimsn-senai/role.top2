@@ -1,3 +1,5 @@
 tipo_usuario=0;nome=adm;idade=10/03/2000;email=adm@bool.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=123;
 tipo_usuario=1;nome=marina souza;idade=10/03/2000;email=ooo@bool.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=123456;
 tipo_usuario=1;nome=teste1;idade=10/03/2000;email=teste1@email.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=123;
+tipo_usuario=1;nome=gabriel;idade=10/03/2000;email=gabriel.gmsn@hotmail.com;telefone=12131212132132;endereco=dfdfdssfs;CPF=1213213213;senha=123123;
+tipo_usuario=1;nome=marina souza;idade=10/03/2000;email=teste12@email.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=123;

@@ -4,13 +4,15 @@ using RolêTopMVC.ViewModels;
 
 namespace RolêTopMVC.Controllers
 {
-    public class SucessoController : Controller
+    public class SucessoController : AbstractController
     {
 
-        public IActionResult Index()
-        {
-            return View(new RespostasViewModel (){
-                NomeView = "Sucesso"
+            public IActionResult Index()
+        {    
+                return View(new RespostasViewModel(){
+                NomeView = "Sucesso",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession() 
             });
         }
     }

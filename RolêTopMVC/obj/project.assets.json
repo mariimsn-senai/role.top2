@@ -12077,28 +12077,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marina\\.nuget\\packages\\": {},
+    "C:\\Users\\44879682837\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marina\\Desktop\\Role.TOP\\RolêTopMVC\\RolêTopMVC.csproj",
+      "projectUniqueName": "C:\\Users\\44879682837\\Desktop\\Role.TOP2\\RolêTopMVC\\RolêTopMVC.csproj",
       "projectName": "RolêTopMVC",
-      "projectPath": "C:\\Users\\Marina\\Desktop\\Role.TOP\\RolêTopMVC\\RolêTopMVC.csproj",
-      "packagesPath": "C:\\Users\\Marina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marina\\Desktop\\Role.TOP\\RolêTopMVC\\obj\\",
+      "projectPath": "C:\\Users\\44879682837\\Desktop\\Role.TOP2\\RolêTopMVC\\RolêTopMVC.csproj",
+      "packagesPath": "C:\\Users\\44879682837\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\44879682837\\Desktop\\Role.TOP2\\RolêTopMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Marina\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\44879682837\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

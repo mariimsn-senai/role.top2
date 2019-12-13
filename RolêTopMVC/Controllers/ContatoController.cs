@@ -3,14 +3,16 @@ using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Controllers
 {
-    public class ContatoController : Controller
+    public class ContatoController : AbstractController
     {
         
 
         public IActionResult Index()
-        {
-            return View(new AgendamentoViewModel (){
-                NomeView = "Contato"
+        {    
+                return View(new AgendamentoViewModel(){
+                NomeView = "Contato",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession() 
             });
         }
     }

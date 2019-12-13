@@ -88,19 +88,6 @@ namespace RolêTopMVC.Controllers
 
         }
 
-        public IActionResult Historico ()
-        {
-            var emailCliente = ObterUsuarioSession();
-            var pedidosCliente = produtoRepository.ObterTodosPorCliente(emailCliente);
-
-            return View(new HistoricoViewModel()
-            {
-                Produto = pedidosCliente,
-                NomeView = "Histórico",
-                UsuarioEmail = ObterUsuarioSession(),
-                UsuarioNome = ObterUsuarioNomeSession()
-            });
-        }
 
                 public IActionResult Logoff()
         {

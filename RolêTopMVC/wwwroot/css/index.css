@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+main{
+  background-color: rgb(167, 172, 173);
+}
 nav #bt-mobile-menu {
 display: none;
 }
@@ -28,6 +31,17 @@ justify-content: flex-end;
 font-family: 'Limelight', cursive;
 font-size: 1.5em;
 padding: 0em 0px 0px 9px;
+
+}
+
+.proxima{
+color: red;
+}
+
+marquee
+{
+  background-color: rgb(167, 172, 173);
+  align-items: center;
 
 }
 

@@ -1,4 +1,5 @@
-﻿<main>
+﻿@model RolêTopMVC.ViewModels.DashboardViewModel
+<main>
     <form method="POST" action='@Url.Action()'></form>
     <section class=video>
         
@@ -11,4 +12,13 @@
                 </video>
             </div>
         </section>
+<marquee>
+                    <h1 class="proxima">Proximas Festas!</h1>
+             @foreach(var produto in Model.Produto )
+                    {
+                        {
+                                <p>        @produto.Cliente.Nome , @produto.data</p>
+                   }
+                    }
+</marquee>
     </main>

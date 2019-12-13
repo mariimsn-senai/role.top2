@@ -1,27 +1,36 @@
 @model RolêTopMVC.ViewModels.HistoricoViewModel
  <main>
-<div id="tabe">
-    <table border=1px >
- </thead>
-         <tr>
+     <h1>Página do Cliente</h1>
+    <h2>Seus Pedidos:</h2>
+<div id="tabela" style="border="1">
+    
+    <table >
+        <div class="thead" style="border="3">
+            <thead>
+                <tr>
             
-                    <th style="width:500px; display:block; text-align: left">       Pacote     </th>
-                    <th style="width:500px; display:block; text-align: left">      Data       </th>
-                    <th style="width:500px; display:block; text-align: left">       Preço      </th>
-                    <th style="width:500px; display:block; text-align: left">      Pendente     </th>
+                    <th rowspan="2">          Pacote       </th>
+                    <th rowspan="2">          Data            </th>
+                    <th rowspan="2">         horario         </th>
+
             
                 </tr>
-        </thead>
+            </thead>
+        </div>
+            <div class="body" style="border="3">
+            <tbody >
         @foreach(var produto in Model.Produto)
         {
-            <tbody>
                 <tr>
-                            <td>@produto.Cliente.Nome</td>
-                            <td>@produto.data</td>
-                            <td>@produto.horario</td>
-                <tr>
-            </tbody>
+                            <td colspan="2">   @produto.Cliente.Nome   </td>
+                            <td colspan="2">         @produto.data           </td>
+                            <td colspan="2">   @produto.horario        </td>
+
+                </tr>
         }
+            </tbody>
+            </div>
     </div>
     </table>
  </main>
+ 

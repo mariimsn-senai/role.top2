@@ -88,7 +88,7 @@ function showSlides(n) {
     }@if("ADM".Equals(@Model.NomeView))
     {
         <link href="~/css/adm.css" rel="stylesheet" type="text/css">
-    }@if("Clientee2".Equals(@Model.NomeView))
+    }@if("Historico".Equals(@Model.NomeView))
     {
         <link href="~/css/adm.css" rel="stylesheet" type="text/css">
     //}@if("Agendamento".Equals(@Model.NomeView))
@@ -125,7 +125,7 @@ function showSlides(n) {
                         <div class="junto">
                         <a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Logoff"><b>Sair /</b></a>
                         <br>
-                        <a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Historico"><b>Minha Conta</b></a>
+                        <a onclick="toggleMobileMenu()" asp-controller="Clientee2" asp-action="Historico"><b>Minha Conta</b></a>
                         </div>
                     }
                     

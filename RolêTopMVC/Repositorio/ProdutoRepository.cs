@@ -35,6 +35,7 @@ namespace RolêTopMVC.Repositorio
 
         public List<Produto> ObterTodosPorCliente(string emailCliente)
         {
+
             var produtos = ObterTodos();
             List<Produto> pedidosCliente = new List<Produto>();
 
@@ -57,8 +58,9 @@ namespace RolêTopMVC.Repositorio
             {
                 Produto produto = new Produto();
 
-                    
+
                     produto.Id = ulong.Parse(ExtrairValorDoCampo("Id", item));
+                    produto.Cliente.Email = ExtrairValorDoCampo("cliente_email", item);
                     produto.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", item);
                     produto.Status = uint.Parse(ExtrairValorDoCampo("status_pedido", item));
                     produto.Nome = ExtrairValorDoCampo("Nome", item);
@@ -69,6 +71,11 @@ namespace RolêTopMVC.Repositorio
                 produtos.Add(produto);
             }
             return produtos;
+        }
+
+        private string PrepararEventoCSV(Produto produto)
+        {
+            return $"Id={produto.Id};cliente_email={produto.Cliente.Email};cliente_nome={produto.Cliente.Nome};status_pedido={produto.Status};Nome={produto.Nome};data={produto.data};horario={produto.horario}";
         }
 
         public bool Atualizar(Produto pedido)
@@ -111,11 +118,5 @@ namespace RolêTopMVC.Repositorio
             return null;
         }
         
-
-        
-        private string PrepararEventoCSV(Produto produto)
-        {
-            return $"Id={produto.Id};cliente_nome={produto.Cliente.Nome};status_pedido={produto.Status};Nome={produto.Nome};data={produto.data};horario={produto.horario}";
-        }
     }
 }
