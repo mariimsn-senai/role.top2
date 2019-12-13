@@ -1,0 +1,238 @@
+@model RolêTopMVC.Models.AgendamentoViewModel
+<main>
+
+
+<h1>Agendamento</h1>
+
+ <div class="all"></div>
+ <br>  
+
+
+<div class="pacotes">
+        <div class="tex">
+            <div class="Ps">
+            
+            <b>Pacote Simples</b>
+            <br> 
+            <br>
+            <br>
+            Alugar o espaço
+            <br>
+            <br>
+            <br>
+            Valor:10,000R$
+            <br>
+            <br>
+            
+            
+            </div>
+        </div>
+        
+        <div class="tex">
+            <div class="PacotePadrao">
+                <div class="Pp">
+
+            <b>Pacote padrão</b>
+            <br>
+            <br>
+            Alugar o espaço
+            <br>
+            mais o som
+            <br>
+            ou a luz.
+            <br>
+            <br>
+            Valor: 15,000R$
+            <br>
+            <br>
+            
+            </div>
+            </div>
+        </div>
+
+        <div class="tex">
+            <div class="PacotePremium">
+                    <div class="PPr">
+            
+            <b>Pacote premium</b>
+            <br>
+            <br>
+            Alugar o espaço
+            <br>
+            mais o som
+            <br>
+            e a luz.
+            <br>
+            <br>
+            Valor: 20,000R$
+            <br>
+            <br>
+            </div>
+            </div>
+        </div> 
+    </div>
+</section>
+<br>
+    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+    {
+            <a href='@Url.Action("Transferir", "Pedido")' class="pacotes">
+                <input type="submit" class="compra"><b>Compre já!</b>
+            </a>
+    }
+    else
+    {
+
+<div class="Calendario">
+    <label class="Calendario2">
+
+    
+
+    <table class="tabela" >
+    
+        <caption class="mes">Setembro 2019</caption>
+
+        <thead>
+
+                <tr>
+
+                        <td><div class="dia semana">D</div></td>
+
+                        <td><div class="dia semana">S</div></td>
+
+                        <td><div class="dia semana">T</div></td>
+
+                        <td><div class="dia semana">Q</div></td>
+
+                        <td><div class="dia semana">Q</div></td>
+
+                        <td><div class="dia semana">S</div></td>
+
+                        <td><div class="dia semana">S</div></td>
+
+                </tr>
+
+        </thead>
+
+        <tbody>
+
+                <tr>
+
+                        <td><div class="dia">1<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">2<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">3<span class="evento"></span></div></td>
+
+                        <td><div class="dia">4</div></td>
+
+                        <td><div class="dia">5<span class="evento"></span></div></td>
+
+                        <td><div class="dia">6</div></td>
+
+                        <td><div class="dia">7</div></td>
+
+                </tr>
+
+                <tr>
+
+                        <td><div class="dia">8<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">9</div></td>
+
+                        <td><div class="dia">10</div></td>
+
+                        <td><div class="dia">11<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">12</div></td>
+
+                        <td><div class="dia">13<span class="evento"></span></div></td>
+
+                        <td><div class="dia">14</div></td>
+
+                </tr>				  
+
+                <tr>
+
+                        <td><div class="dia">15<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">16</div></td>
+
+                        <td><div class="dia">17</div></td>
+
+                        <td><div class="dia">18<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">19</div></td>
+
+                        <td><div class="dia">20<span class="evento"></span></div></td>
+
+                        <td><div class="dia">21</div></td>
+
+                </tr>
+
+                <tr>
+
+                        <td><div class="dia">22<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">23</div></td>
+
+                        <td><div class="dia">24</div></td>
+
+                        <td><div class="dia">25<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">26</div></td>
+
+                        <td><div class="dia">27<span class="evento"><b>Ocupado</b></span></div></td>
+
+                        <td><div class="dia">28</div></td>
+
+                        
+
+                </tr>
+
+                <tr>
+
+                    <td><div class="dia">29<span class="evento"><b>Ocupado</b></span></div></td>
+
+                    <td><div class="dia">30</div></td>
+            </tr>
+
+        </tbody>
+    
+    </table>
+</div>
+    
+<br>
+<form name="data" action='@Url.Action("GravarEvento", "Agendamento")' method="POST" class="ag">
+    <input type="hidden" name="id_pacote" value="@Model.CodigoPacote"/>
+    <p>Horário:</p>
+    <p class="numero">
+    <input type="time" name="horario" required="required" >
+    <br />
+    <p>Data:</p>
+    <p class="numero">
+    <input type="date" name="data" required="required">
+    </p>
+    <br />
+    
+    <!--  INSERIR INPUT PARA SERVIÇOS -->
+            
+            <input type="submit" value="Enviar" />
+            <a href='@Url.Action("GravarEvento", "Agendamento")' method="GET"></a>
+            
+</form>
+}
+@if(@Model.CodigoPacote == 1)
+{
+        <link href="~/css/agendamento.css" rel="stylesheet" type="text/css">
+}
+@if(@Model.CodigoPacote == 2)
+{
+        <link href="~/css/AgendamentoPremium.css" rel="stylesheet" type="text/css">
+}
+@if(@Model.CodigoPacote == 3)
+{
+        <link href="~/css/AgendamentoPadrao.css" rel="stylesheet" type="text/css">
+}
+<br>
+<br>
+</main>

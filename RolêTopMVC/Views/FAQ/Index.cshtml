@@ -1,0 +1,71 @@
+<main>
+    <form method="POST" action='@Url.Action()'></form>
+  <section id='titulo'>
+            <div>
+                <h1>FAQ</h1>
+                <br>
+                <strong><p> Tem área de fumante?</strong>
+                    <br>
+                 Sim, temos área para fumantes.
+                <br>
+                <strong>Tem banheiro?</strong>
+                    <br>
+                    Temos dois banheiros
+                <br>
+                <strong>Como faço para comprar?</strong>
+                    <br>
+                    Em nosso site temos planos.
+                <br>
+                <strong>Tem camarim?</strong>
+                   <br>
+                    Sim, nos temos.
+                <br>
+                <strong>Como faço para visitar o salão?</strong>
+                   <br>
+                   É só entrar em contato conosco.
+                <br>
+                <strong>É feito um contrato?</strong>
+                  <br>
+                   Sim, para sua segurança nos fazemos um contrato.
+                <br>
+                <strong>A decoração é inclusa?</strong>
+                   <br>
+                   Infelizmente não fazemos decorações.
+                <br>
+                <strong>Quantos pacotes tem para escolher?</strong>
+                  <br>
+                   Temos três pacotes, veja em nosso site.</p>
+            </div>
+        
+            </section>  
+
+            <script>
+                    function toggleMobileMenu() {
+                        var ul = document.querySelector("nav ul");
+                        var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                        var icon = document.querySelector(".icon > i");
+            
+                        ul.classList.toggle("mobile-mode");
+            
+                        if (icon.classList.contains("fa-bars")) {
+                            icon.classList.remove("fa-bars");
+                            icon.classList.remove("fa");
+            
+                            icon.classList.add("fas");
+                            icon.classList.add("fa-bars");
+                        } else {
+                            icon.classList.remove("fas");
+                            icon.classList.remove("fa-bars");
+            
+                            icon.classList.add("fa");
+                            icon.classList.add("fa-bars");
+                        }
+            
+                        for (var button of commonButtons) {
+                            button.classList.toggle("active");
+                        }
+            
+                    }
+            
+                </script>
+</main>

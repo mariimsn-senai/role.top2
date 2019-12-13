@@ -1,0 +1,123 @@
+@model RolêTopMVC.Models.AgendamentoViewModel
+<main>
+<div class="all"></div>
+<br>    
+<h2>Cartão de crédito</h2>
+
+<div id=ban>
+        <label>
+                <input type="radio" name="RadBand" required="required" />
+                    <img src="img/bandeira/196578.svg"  />
+            </label>  
+            
+            <label>
+                    <input type="radio" name="RadBand" required="required"/>
+                        <img src="img/bandeira/elo1.png" />
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked required="required"/>
+                        <img src="img/bandeira/hipercard2.png"/>
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked required="required"/>
+                        <img src="img/bandeira/master.svg" />
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked  required="required"/>
+                        <img src="img/bandeira/boleto.png" />
+                        
+            </label>
+    </div>
+        <br>
+            <div class="compra">
+            <p>Número do cartão:</p>
+            <p class="numero">
+                <input type="text" name="" required="required">
+            </p>
+            <br>
+            <p>Nome do cartão:</p>
+            <p class="numero">
+                <input type="text" name="nome" required="required">
+            </p>
+        
+        <br>
+        <p>Validade</p>    
+        <div id=validade>
+            <label>Mês</label>
+            <select required ng-model="customer.monthCard" required="required" >
+                <option value="01">Janeiro</option>
+                <option value="02">Favereiro </option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            
+            <label>Ano</label>
+            <select required ng-model="customer.yearCard" required="required" >
+                <option value="18"> 2019</option>
+                <option value="19"> 2020</option>
+                <option value="20"> 2021</option>
+                <option value="21"> 2022</option>
+                <option value="18"> 2023</option>
+                <option value="19"> 2024</option>
+                <option value="20"> 2025</option>
+                <option value="21"> 2026</option>
+            </select>
+        </div>
+            <br>
+            <P>Código de segurança:</P>
+            <p class="numero">
+                <input type="text" name="nome" required="required">
+            </p>
+            <br>
+
+            <p>Números de parcelas em:</p>
+            <select required ng-model="customer.yearCard" required="required" >
+                <option value="22"> 1x de 10,000R$ (10,000R$) </option>
+                <option value="23"> 2x de 5,000R$ (10,000R$)</option>
+                <option value="24"> 3x de 3,334R$ (10,000R$)</option>
+                <option value="25"> 4x de 2,500R$ (10,025R$)</option>
+                <option value="26"> 5x de 2,000R$ (10,030R$)</option>
+                <option value="27"> 6x de 1,667R$ (10,035R$)</option>
+            </select>
+        <br>
+        <br>
+        <br>
+        <div class="enviar" > 
+        
+            <div id=um>
+                <a href="agendamento.html">
+                    <input type="button" name="voltar" value="Voltar" 
+                    alt="voltar"></a>
+            </div>
+            <div id=dois>    
+        </div>    
+        <br>
+        <br>
+
+        @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+        {
+            <a href='@Url.Action("Transferir", "Pedido")' method="GET" class="pacotes">
+                <input type="submit" class="compra"><b>Compre já!</b>
+            </a>
+        }else
+        {
+    <form name="parcelas" action='@Url.Action("GravarPedido", "Pagamento")' method="POST" class="ag">
+    <input type="hidden" name="id_pacote" value="@Model.CodigoPacote"/>
+    <input type="hidden" name="id_data" value="@Model.data"/>
+    <input type="hidden" name="id_horario" value="@Model.horario"/>
+            <input type="submit" value="Enviar" />
+            </form> 
+        }
+        </div>  
+</div>
+</div>
+<script>
+</main>

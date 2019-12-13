@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="login.css"  rel="stylesheet" type="text/css">
+    <title>Roletop</title> 
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <link href="login.js"  rel="stylesheet" type="text/js">
+</head>
+<body>
+    
+    <section id=menu>
+        <header>
+            <nav>
+                <div id=ima>
+                    <img src="ima/logo.png">
+                    
+                    <div class="junto">
+                        <a href="login.html">login/cadastro</a></p>
+                        <a href="login.html"><img src="usuario/181549.svg" alt="usuario"></a>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li id="bt-mobile-menu">
+                        
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=role.html>Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                        
+                    </ul>
+                    <hr>
+                </nav>
+            </header>
+        </section>
+        <div id="gradient" >
+                <script src=login.js></script></div>
+        
+        
+        <div class="formu"> 
+                <br>
+                <br> 
+                <form name="formteste" action="" method="post" >
+                    <div id=lon>  
+                        <h1>Login</h1>
+                        <p>Email:</p>
+                        <p class="email">
+                            <input type="email" name="email" placeholder="Roletop@gmail.com" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>Senha:</p>
+                        <p class="Senha">
+                            <input type="password" name="Senha" placeholder="*********" required="required">
+                        </p> 
+                        <br>
+                        <p class="enviar">
+                            <input type="submit" name="enviar" value="Enviar">
+                        </p>
+                        <br>   
+                    </div>
+                </form>
+                <form name="formteste" action="" method="post">
+                    <div id=cadas>
+                        <h1>Cadastro</h1>
+                        
+                        <p>Nome:</p>
+                        <p class="nome">
+                            <input type="text" name="nome" placeholder="José Silva Filho" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>Idade:</p>
+                        <p class="idade">
+                            <input type="text" name="nome" placeholder="10/03/2000" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>Email:</p>
+                        <p class="email">
+                            <input type="email" name="email" placeholder="Roletop@gmail.com" required="required">
+                        </p>
+                        
+                        
+                        <br>
+                        <p>Telefone:</p>
+                        <p class="telefone">
+                            <input type="tel" name="telefone" placeholder="1199999-9999" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>Endereço:</p>
+                        <p class="Endereço">
+                            <input type="text" name="address" placeholder="Rua luiz Paulo, 121" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>CPF:</p>
+                        <p class="Endereço">
+                            <input type="adress" name="CPF" placeholder="448596251-37" required="required">
+                        </p>
+                        
+                        <br>
+                        <p>Senha:</p>
+                        <p class="Senha">
+                            <input type="password" name="Senha" placeholder="*********" required="required">
+                        </p>    
+                        <br>
+                        
+                        <p class="enviar">
+                            <input type="submit" name="enviar" value="Enviar">
+                        </p>
+                        
+                        <br>
+                    </div>
+                </form>
+            </div> 
+            <br>
+            <br>
+            
+            <div class="adm">
+                <a href=adm.html><input type="submit" name="Página do administrador" value="Página do administrador"></a>  
+            </div>
+        
+
+<script>
+    function toggleMobileMenu() {
+        var ul = document.querySelector("nav ul");
+        var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+        var icon = document.querySelector(".icon > i");
+
+        ul.classList.toggle("mobile-mode");
+
+        if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.remove("fa");
+
+            icon.classList.add("fas");
+            icon.classList.add("fa-bars");
+        } else {
+            icon.classList.remove("fas");
+            icon.classList.remove("fa-bars");
+
+            icon.classList.add("fa");
+            icon.classList.add("fa-bars");
+        }
+
+        for (var button of commonButtons) {
+            button.classList.toggle("active");
+        }
+
+    }
+
+</script>
+
+
+    <section>
+            <div id=rodapé>
+                    <footer>
+                        <address>
+                            Avenida de Limeira, 539 - Campo Elìseos - SP 
+                            <br>
+                            Roletop@gmail.com
+                            <br>
+                            Tel: 11 958623-5555
+                        </address>
+                    </footer>
+            </div>
+                </section>
+            </body>
+            </html>
+
+
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="ambiente.css"  rel="stylesheet" type="text/css">
+    <link href="ambiente.js"  rel="stylesheet" type="text/css">
+    <script src=ambiente.js></script>
+    <title>Roletop</title> 
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+  </head>
+  
+  <body>
+    <section id=menu>
+      <header>
+          <nav>
+              <div id=ima>
+                  <img src="ima/logo.png">
+
+                  <div class="junto">
+                      <a href="login.html">login/cadastro</a></p>
+                      <a href="login.html"><img src="usuario/181549.svg" alt="usuario"></a>
+                  </div>
+              </div>
+              <hr>
+              <ul>
+                  <li id="bt-mobile-menu">
+                      <!-- HTML para colocar os ícones do FA -->
+                      <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                          <i class="fa fa-bars"></i>
+                      </a>
+                  </li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=role.html>Home</a></li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                  <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                  
+              </ul>
+              <hr>
+          </nav>
+      </header>
+  </section>
+<h1>Ambiente</h1>
+
+<div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+            <img src="slide/1.jpeg" style="width:80%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="slide/2.jpeg" style="width:80%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="slide/3.jpeg" style="width:80%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="slide/4.jpg" style="width:80%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="slide/5.jpeg" style="width:80%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="slide/7.jpg" style="width:80%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="slide/1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Pista">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="slide/2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Pista">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="slide/3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Balcão">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="slide/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Casamento">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="slide/5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Natureza">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="slide/7.jpg" style="width:100%" onclick="currentSlide(6)" alt="Festaele">
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-bars");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+
+    </script>
+
+    <section>
+            <div id=rodapé>
+                    <footer>
+                        <address>
+                            Avenida de Limeira, 539 - Campo Elìseos - SP 
+                            <br>
+                            Roletop@gmail.com
+                            <br>
+                            Tel: 11 958623-5555
+                        </address>
+                    </footer>
+            </div>
+                </section>
+            </body>
+            </html>
+            

@@ -1,0 +1,133 @@
+    @model RolêTopMVC.ViewModels.DashboardViewModel
+    <main>
+    <h1>Página do administrador</h1>
+    <h2>Pedidos:</h2>
+<div id="tabela">
+   
+    <table style="border=1px">
+            <thead>
+                <tr>
+                    <th>Nomes</th>
+                    <th>Datas</th>
+                    <th>Horario</th>
+                    <th>Aprovar</th>
+                    <th>Recusar</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var produto in Model.Produto )
+                    {
+                        if (produto.Status == 0)
+                        {
+                            <tr>
+                                <td>@produto.Cliente.Nome</td>
+                                <td>@produto.data</td>
+                                <td>@produto.horario</td>
+                                <td ><a class="icon-aprovar" href='@Url.Action("Aprovar", "Produto", new {id = @produto.Id})'><i class="fas fa-check"></i></a></td>
+                                <td ><a class="icon-reprovar" href='@Url.Action("Reprovar", "Produto", new {id = @produto.Id})'><i class="fas fa-times"></i></a></td>
+                            </tr>
+                            
+                        }
+                    }
+            </tbody>
+     </table>
+</div>      
+    
+    
+    <h2>Aprovados</h2>
+<div id="tabela">
+   
+    <table style="border=1px">
+            <thead>
+                <tr>
+                    <th>Nomes</th>
+                    <th>Datas</th>
+                    <th>Horario</th>
+                    <th>Cancelar</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var produto in Model.Produto )
+                    {
+                        if (produto.Status == 1)
+                        {
+                            <tr>
+                                <td>@produto.Cliente.Nome</td>
+                                <td>@produto.data</td>
+                                <td>@produto.horario</td>
+                                <td ><a  class="icon-reprovar" href='@Url.Action("Readimitir", "Produto", new {id = @produto.Id})'><i class="fas fa-times"></a></td>
+                            </tr>
+                            
+                        }
+                    }
+            </tbody>
+    </table>
+</div>      
+    <h2>Reprovados</h2>
+<div id="tabela">
+   
+    <table style="border=1px">
+            <thead>
+                <tr>
+                    <th>Nomes</th>
+                    <th>Datas</th>
+                    <th>Horario</th>
+                    <th>Readimitir</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var produto in Model.Produto )
+                    {
+                        if (produto.Status == 2)
+                        {
+                            <tr>
+                                <td>@produto.Cliente.Nome</td>
+                                <td>@produto.data</td>
+                                <td>@produto.horario</td>
+                                <td ><a  class="icon-read" href='@Url.Action("Readimitir", "Produto", new {id = @produto.Id})'><i class="fas fa-retweet"></i></a></td>
+                            </tr>
+                            
+                        }
+                    }
+            </tbody>
+    </table>
+</div>      
+<h2>Assinantes do site:</h2>
+<div id=block>
+        
+  
+  
+  
+  
+  <table style="border=3px">
+            <tbody>
+                <tr> 
+                    <td>Paulo Nunez Silva</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                    <td>Antonip Nascimento</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                    <td>Aline Flores</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                        <td>Antonip Nascimento</td>
+                        <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                        <td>Mais informações</td>
+                    </tr>
+                    <tr> 
+                        <td>Aline Flores</td>
+                        <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                        <td>Mais informações</td>
+                    </tr>
+                
+            </tbody>
+    </table>
+</div>   
+    </main>

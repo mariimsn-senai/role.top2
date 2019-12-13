@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="casa.css" rel="stylesheet" type="text/css">
+    <title>Roletop</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+
+    <section id=menu>
+        <header>
+            <nav>
+                <div id=ima>
+                    <img src="img/ima/logo.png">
+
+                    <div class="junto">
+                        <a href="login.html">login/cadastro</a></p>
+                        <a href="login.html"><img src="img/usuario/181549.svg" alt="usuario"></a>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <!-- HTML para colocar os ícones do FA -->
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=index.html>Home</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                    
+                </ul>
+                <hr>
+            </nav>
+        </header>
+    </section>
+
+<main>
+
+    <section id=tudo>
+        <div>
+            <h1>CASA</h1>
+        </div>
+        <!-- 100% -->
+        <div id="info">
+            
+            <p>
+                Temos um excelente espaço
+                <br>
+                com dois banheiros, área de
+                <br>
+                fumante, camarim, luz e som
+                <br>
+                de bela qualidade.
+                <br>
+                Venha conhecer nosso espaço!
+            </p>
+            
+            
+            
+            
+            <img src="img/foto.casa/WhatsApp-Image-2019-02-27-at-20.42.02-1.jpeg" alt="foto do bar">
+            
+            
+        </div>
+    </section>
+</main>
+    
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-bars");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+
+    </script>
+
+
+
+    <section>
+        <div id=rodapé>
+            <footer>
+                <address>
+                    Avenida de Limeira, 539 - Campo Elìseos - SP
+                    <br>
+                    Roletop@gmail.com
+                    <br>
+                    Tel: 11 958623-5555
+                </address>
+            </footer>
+        </div>
+    </section>
+</body>
+
+</html>

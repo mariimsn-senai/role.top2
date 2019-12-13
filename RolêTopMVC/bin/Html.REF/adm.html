@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="adm.css" rel="stylesheet" type="text/css">
+    <title>Roletop</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+
+    <body>
+
+        <section id=menu>
+            <header>
+                <nav>
+                    <div id=ima>
+                        <img src="ima/logo.png">
+    
+                        <div class="junto">
+                            <a href="login.html">login/cadastro</a></p>
+                            <a href="login.html"><img src="usuario/181549.svg" alt="usuario"></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <!-- HTML para colocar os ícones do FA -->
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=role.html>Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                        
+                    </ul>
+                    <hr>
+                </nav>
+            </header>
+        </section>
+
+    <h1>Página do administrador</h1>
+    <h2>Pedidos:</h2>
+<div id="tabela">
+   
+    <table border=1px>
+            <thead>
+                <tr>
+                    <th>Nomes</th>
+                    <th>Datas</th>
+                    <th>Respostas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> 
+                    <td>Paulo Nunez Silva</td>
+                    <td>15/10/2019</td>
+                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
+                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                </tr>
+                <tr>
+                    <td>Antonip Nascimento</td>
+                    <td>16/10/2019</td>
+                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
+                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                </tr>
+                <tr>
+                    <td>Aline Flores</td>
+                    <td>17/10/2019</td>
+                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
+                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                </tr>
+                <tr>
+                        <td>Antonip Nascimento</td>
+                        <td>16/10/2019</td>
+                        <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
+                            <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                    </tr>
+                    <tr>
+                        <td>Aline Flores</td>
+                        <td>17/10/2019</td>
+                        <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
+                            <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                    </tr>
+            </tbody>
+     </table>
+</div>      
+<h2>Assinantes do site:</h2>
+<div id=block>
+        
+  <table border=3px>
+            <tbody>
+                <tr> 
+                    <td>Paulo Nunez Silva</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                    <td>Antonip Nascimento</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                    <td>Aline Flores</td>
+                    <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                    <td>Mais informações</td>
+                </tr>
+                <tr> 
+                        <td>Antonip Nascimento</td>
+                        <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                        <td>Mais informações</td>
+                    </tr>
+                    <tr> 
+                        <td>Aline Flores</td>
+                        <td><input class="bloquear" type="button" name="Bloquear" value="Bloquear" alt="Aceitar"></td>
+                        <td>Mais informações</td>
+                    </tr>
+                
+            </tbody>
+    </table>
+</div>   
+     <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-bars");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-bars");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+    
+        </script>
+        <section>
+            <div id=rodapé>
+                <footer>
+                    <address>
+                        Avenida de Limeira, 539 - Campo Elìseos - SP
+                        <br>
+                        Roletop@gmail.com
+                        <br>
+                        Tel: 11 958623-5555
+                    </address>
+                </footer>
+            </div>
+        </section>
+    </body>
+    
+    </html>

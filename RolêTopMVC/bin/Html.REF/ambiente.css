@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav #bt-mobile-menu {
+display: none;
+}
+
+#ima{
+background-image: linear-gradient(#fff,#ffc600);
+}
+
+nav div{
+display: flex;  
+justify-content: space-between; 
+
+}
+
+.junto{
+flex-direction: row;
+align-items: center;
+
+}
+
+nav p{
+justify-content: flex-end;
+font-family: 'Limelight', cursive;
+font-size: 1.5em;
+padding: 0em 0px 0px 9px;
+
+}
+
+img:first-child{
+width: 8%;
+padding: 0.2em;
+}
+
+.junto img:first-child{
+width: 40%;
+padding: 0;
+}
+
+.junto > a{
+  color: black;
+  padding: 0.2em;
+}
+
+ul{
+background-color: #ffc600;
+width: 100%;
+height: 50%;
+
+}
+
+nav ul > li > a{
+  text-decoration: none;
+  padding: 0% 5% 0% 5%;
+  color: black;
+}
+
+  nav ul > li{
+
+width: 100%;
+text-align: center;
+
+}
+
+NAV ul{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;  
+font-size: 1.5em;
+font-family: 'Limelight', cursive;
+align-items: flex-end;
+justify-content: space-between;
+list-style-type: none;
+
+    }
+
+nav ul > li > a:hover{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+
+}  
+
+  h1{
+    text-align: center;
+    color: brown;
+    padding: 20px 0px 20px 0px;
+    font-size: 1.5em;
+    font-family: 'Limelight', cursive;
+    background: #ffc600;
+    }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    background: black;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    background: #ffc600;
+  }
+
+ .mySlides img{
+   align-content: center;
+   align-self: center;
+   padding: 0em 0px 0px 250px;
+ }
+
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 0.3px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  #rodapé {
+    background-image: linear-gradient(#ffc600,#fff);
+    height: 30%;
+    padding: 1.5%;
+  }
+  
+
+  @media (max-width: 900px) {
+    #tudo img{
+      width: 50%;
+    }
+  }
+  @media (max-width:600px){
+    nav #bt-mobile-menu {
+      display: block;
+  
+  }
+  
+  nav #bt-mobile-menu {
+    display: block;
+  }
+  
+  nav .bt-common-menu {
+    display: none;
+  }
+  
+  nav .bt-common-menu.active {
+    display: block;
+  }
+  
+  nav ul.mobile-mode {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  }
+  @media (max-width: 600px) {
+    img:first-child{
+      width: 19%;
+      }
+  
+  }
+  
+  @media (max-width: 600px) {
+    .junto img:first-child{
+        width: 100%;
+        padding: 0% 3% 0% 5%;
+        margin-right: 3%;
+      }
+  
+  }
+  
+  @media (max-width: 600px) {
+    .junto{
+      margin-left: 9em;
+      }
+  
+  }
+  @media (max-width: 600px) {
+    .mySlides img{
+      align-content: center;
+      align-self: center;
+      padding: 0em 0px 0px 60px;
+      
+    }
+  
+  }

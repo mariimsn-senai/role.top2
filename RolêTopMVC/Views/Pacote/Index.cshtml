@@ -1,0 +1,148 @@
+@model RolêTopMVC.ViewModels.PacoteViewModel
+<main>
+    <section id="tudo">
+        <div>
+            <h1>Pacotes</h1>
+        </div>
+        <div class="pacotes-flex">
+            <div class="pacote-flex">
+                <b><label class="tex" for="PacoteSimples" >Pacote Simples</label></b>
+                <input type="hidden" name="PacoteSimples" />
+                <br> 
+                <br>
+                <br>
+                <p>Alugar o espaço</p>
+                <br>
+                <br>
+                <br>
+                <p>Valor:10,000R$</p>
+                <br>
+                <br>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    
+                    <a href='@Url.Action("Transferir", "Pedido")' class="pacotes">Faça o login para comprar</a>
+                }
+                else
+                {
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacoteSimples})' class="pacotes">
+                        Compre já!
+                    </a>
+                }
+                
+
+            </div>
+
+            <div class="pacote-flex">
+                <b><label class="tex" for="PacotePadrao" >Pacote Padrao</label></b>
+                <input type="hidden" name="PacotePadrao" />
+                <br> 
+                <br>
+                <br>
+                <p>Alugar o espaço</p>
+                <br>
+                <br>
+                <br>
+                <p>Valor:15,000R$</p>
+                <br>
+                <br>
+
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    <a href='@Url.Action("Transferir", "Pedido")' class="pacotes">Faça o login para comprar</a>
+                }
+                else
+                {
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePadrao})' class="pacotes">
+                        Compre já!
+                    </a>
+                }
+
+
+            </div>
+
+            <div class="pacote-flex">
+                <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>
+                <input type="hidden" name="PacotePremium" />
+                <br> 
+                <br>
+                <br>
+                <p>Alugar o espaço</p>
+                <br>
+                <br>
+                <br>
+                <p>Valor:15,000R$</p>
+                <br>
+                <br>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    <a href='@Url.Action("Transferir", "Pedido")' class="pacotes">Faça o login para comprar</a>
+                }
+                else
+                {
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePremium})' class="pacotes">
+                        Compre já!
+                    </a>
+                }
+            </div>
+        </div>
+            
+<!--                     
+            <label class="tex" for="PacotePadrao"></div>
+                <p>
+                <b><label class="tex" for="PacotePadrao" >Pacote Padrao</label></b>
+                <input type="hidden" name="PacotePadrao"/>
+                <br>
+                <br>
+                <p>Alugar o espaço
+                <br>
+                mais o som
+                <br>
+                ou a luz.</p>
+                <br>
+                <br>
+                <p>Valor: 15,000R$</p>
+                <br>
+                <br>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    <a href='@Url.Action("Transferir", "Pedido")' class="pacotes"></a>
+                }else
+                {
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePadrao})' class="pacotes"></a>
+                }
+                <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
+            </div>
+            
+
+            <label class="tex" for="PacotePremium"></div>
+                <p>
+                <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>
+                <input type="hidden" name="PacotePremium"/>
+                <br>
+                <br>
+                <p>Alugar o espaço
+                <br>
+                mais o som
+                <br>
+                e a luz.</p>
+                <br>
+                <br>
+                <p>Valor: 20,000R$</p>
+                <br>
+                <br>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    <a href='@Url.Action("Transferir", "Pedido")' class="pacotes"></a>
+                }
+                else
+                {
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePremium})' class="pacotes"></a>
+                }
+                <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
+                </div> 
+                </a>
+            </div> 
+        </div> -->
+    </section>
+</main>

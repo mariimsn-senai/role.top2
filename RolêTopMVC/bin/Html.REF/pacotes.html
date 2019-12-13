@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="pacotes.css" rel="stylesheet" type="text/css">
+    <title>Roletop</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+        <section id=menu>
+                <header>
+                    <nav>
+                        <div id=ima>
+                            <img src="ima/logo.png">
+            
+                            <div class="junto">
+                                <a href="login.html">login/cadastro</a></p>
+                                <a href="login.html"><img src="usuario/181549.svg" alt="usuario"></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <ul>
+                            <li id="bt-mobile-menu">
+                               
+                                <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=role.html>Home</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                            
+                        </ul>
+                        <hr>
+                    </nav>
+                </header>
+            </section>
+    
+    <section id="tudo">
+        <div>
+            <h1>Pacotes</h1>
+        </div>
+    
+    
+        <div class="pacotes">
+            <div class="tex">
+                <p>   
+                <b>Pacote Simples</b>
+                <br> 
+                <br>
+                <br>
+                Alugar o espaço
+                <br>
+                <br>
+                <br>
+                Valor:10,000R$
+                <br>
+                <br>
+                <div class="compra"><a href="agendamento.html"><b>Compre já!</a></b></div> 
+                </p>
+            </div>
+            
+            <div class="tex">
+                <p>
+                <b>Pacote padrão</b>
+                <br>
+                <br>
+                Alugar o espaço
+                <br>
+                mais o som
+                <br>
+                ou a luz.
+                <br>
+                <br>
+                Valor: 15,000R$
+                <br>
+                <br>
+                <div class="compra"><a href="agendamento.html"><b>Compre já!</a></b></div> 
+                </p>
+            </div>
+
+            <div class="tex">
+                <p>
+                <b>Pacote premium</b>
+                <br>
+                <br>
+                Alugar o espaço
+                <br>
+                mais o som
+                <br>
+                e a luz.
+                <br>
+                <br>
+                Valor: 20,000R$
+                <br>
+                <br>
+                <div class="compra"><a href="agendamento.html"><b>Compre já!</a></b></div> 
+                </div> 
+                </p>
+            </div> 
+        </div>
+    </section>
+
+    <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-bars");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-bars");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+    
+        </script>
+            
+        </script>
+  
+    <section>
+        <div id=rodapé>
+              <footer>
+                  <address>
+                      Avenida de Limeira, 539 - Campo Elìseos - SP 
+                      <br>
+                      Roletop@gmail.com
+                      <br>
+                      Tel: 11 958623-5555
+                   </address>
+               </footer>
+        </div>
+           </section>
+       </body>
+       </html>
+       

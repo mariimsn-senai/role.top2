@@ -1,0 +1,208 @@
+﻿@model RolêTopMVC.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="~/css/login.css" rel="stylesheet" type="text/css">
+    <title>Roletop</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+
+    @if("Home".Equals(@Model.NomeView))
+    {
+        <link href="~/css/index.css" rel="stylesheet" type="text/css">;
+    }
+    @if("Casa".Equals(@Model.NomeView))
+    {
+        <link href="~/css/casa.css" rel="stylesheet" type="text/css">;
+    }
+    @if("FAQ".Equals(@Model.NomeView))
+    {
+        <link href="~/css/FAQ.css" rel="stylesheet" type="text/css">
+    }
+    @if("Pacote".Equals(@Model.NomeView))
+    {
+        <link href="~/css/pacotes.css" rel="stylesheet" type="text/css">
+    }
+    @if("Ambiente".Equals(@Model.NomeView))
+    {
+        <link href="~/css/ambiente.css" rel="stylesheet" type="text/css">
+        <link href="~/js/ambiente.js"  rel="stylesheet" type="text/css">
+        <script src=~/js/ambiente.js></script>
+        <script>
+
+
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+        </script>
+    }
+    @if("Contato".Equals(@Model.NomeView))
+    {
+        <link href="~/css/contato.css" rel="stylesheet" type="text/css">
+    }
+    @if("Login".Equals(@Model.NomeView))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    }
+    @if("LoginImg".Equals(@Model.NomeView))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    }@if("Sucesso".Equals(@Model.NomeView))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        
+    }@if("ADM".Equals(@Model.NomeView))
+    {
+        <link href="~/css/adm.css" rel="stylesheet" type="text/css">
+    }@if("Clientee2".Equals(@Model.NomeView))
+    {
+        <link href="~/css/adm.css" rel="stylesheet" type="text/css">
+    //}@if("Agendamento".Equals(@Model.NomeView))
+    //{
+    //    <link href="~/css/agendamento.css" rel="stylesheet" type="text/css">
+    }@if("Pagamento".Equals(@Model.NomeView))
+    {
+        <link href="~/css/pagamentos.css" rel="stylesheet" type="text/css">
+    }@if("Erro".Equals(@Model.NomeView))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+    }
+
+    
+
+</head>
+
+
+
+<body>
+    <section id=menu>
+        <header>
+            <nav>
+                <div id=ima>
+                    <img src="~/img/ima/logo.png">
+                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                    {
+                    <div class="junto">
+                        <a asp-controller="Login" asp-action="Index" class="active">login/cadastro</a>
+                        <a asp-controller="LoginImg" asp-action="Index" class="active"><img src="~/img/usuario/181549.svg" alt="usuario"></a>
+                    </div>
+                    }else
+                    {
+                        <div class="junto">
+                        <a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Logoff"><b>Sair /</b></a>
+                        <br>
+                        <a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Historico"><b>Minha Conta</b></a>
+                        </div>
+                    }
+                    
+                </div>
+                <hr>
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <!-- HTML para colocar os ícones do FA -->
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Casa" asp-action="Index" class ="active">Casa</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="FAQ" asp-action="Index" class="active">FAQ</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Pacote" asp-action="Index" class="active">Pacotes</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Ambiente" asp-action="Index" class="active">Ambiente</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Contato" asp-action="Index" class="active">Contato</a></li>
+
+                    
+                </ul>
+                <hr>
+            </nav>
+
+    </section>
+
+        </header>
+        @RenderBody()
+
+<script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-bars");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+
+    </script>
+
+<section>
+ <div id=rodapé>
+       <footer>
+           <address>
+               Avenida de Limeira, 539 - Campo Elìseos - SP 
+               <br>
+               Roletop@gmail.com
+               <br>
+               Tel: 11 958623-5555
+            </address>
+        </footer>
+ </div>
+    </section>
+    @if("Login".Equals(@Model.NomeView) || "LoginImg".Equals(@Model.NomeView))
+    {
+    <script type="text/javascript" src="~/js/login.js"></script>
+
+    }
+    
+</body>
+</html>

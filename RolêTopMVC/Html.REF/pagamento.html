@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="pagamentos.css" rel="stylesheet" type="text/css">
+    <title>Roletop</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+        <section id=menu>
+                <header>
+                    <nav>
+                        <div id=ima>
+                            <img src="img/ima/logo.png">
+            
+                            <div class="junto">
+                                <a href="login.html">login/cadastro</a></p>
+                                <a href="login.html"><img src="img/usuario/181549.svg" alt="usuario"></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <ul>
+                            <li id="bt-mobile-menu">
+                               
+                                <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=index.html>Home</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="casa.html">Casa</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Faq.html">FAQ</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="pacotes.html">Pacotes</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="ambiente.html">Ambiente</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html">Contato</a></li>
+                            
+                        </ul>
+                        <hr>
+                    </nav>
+                </header>
+            </section>
+<h1>Forma de pagamento</h1>
+
+<div class="all"></div>
+<br>    
+<h2>Cartão de crédito</h2>
+
+    <div id=ban>
+        <label>
+                <input type="radio" name="RadBand" checked />
+                    <img src="img/bandeira/196578.svg"  />
+            </label>  
+            
+            <label>
+                    <input type="radio" name="RadBand" checked required="required"/>
+                        <img src="img/bandeira/elo1.png" />
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked required="required"/>
+                        <img src="img/bandeira/hipercard2.png"/>
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked required="required"/>
+                        <img src="img/bandeira/master.svg" />
+            </label>
+            <label>
+                    <input type="radio" name="RadBand" checked  required="required"/>
+                        <img src="img/bandeira/boleto.png" />
+                        
+            </label>
+    </div>
+          <br>
+    <form name="formteste" action="" method="post" class="compra">
+
+            <p>Número do cartão:</p>
+            <p class="numero">
+                <input type="text" name="nome" required="required">
+            </p>
+            <br>
+            <p>Nome do cartão:</p>
+            <p class="numero">
+                <input type="text" name="nome" required="required">
+            </p>
+
+        <br>
+        <p>Validade</p>    
+        <div id=validade>
+            <label>Mês</label>
+            <select required ng-model="customer.monthCard" required="required" >
+                <option value="01">Janeiro</option>
+                <option value="02">Favereiro </option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            
+            <label>Ano</label>
+            <select required ng-model="customer.yearCard" required="required" >
+                <option value="18"> 2019</option>
+                <option value="19"> 2020</option>
+                <option value="20"> 2021</option>
+                <option value="21"> 2022</option>
+                <option value="18"> 2023</option>
+                <option value="19"> 2024</option>
+                <option value="20"> 2025</option>
+                <option value="21"> 2026</option>
+            </select>
+        </div>
+            <br>
+            <P>Código de segurança:</P>
+            <p class="numero">
+                <input type="text" name="nome" required="required">
+            </p>
+            <br>
+            <p>Números de parcelas em:</p>
+            <select required ng-model="customer.yearCard" required="required" >
+                <option value="22"> 1x de 10,000R$ (10,000R$) </option>
+                <option value="23"> 2x de 5,000R$ (10,000R$)</option>
+                <option value="24"> 3x de 3,334R$ (10,000R$)</option>
+                <option value="25"> 4x de 2,500R$ (10,025R$)</option>
+                <option value="26"> 5x de 2,000R$ (10,030R$)</option>
+                <option value="27"> 6x de 1,667R$ (10,035R$)</option>
+            </select>
+        <br>
+        <br>
+        <br>
+        <div class="enviar" > 
+           
+            <div id=um>
+                <a href="agendamento.html">
+                    <input type="button" name="voltar" value="Voltar" 
+                    alt="voltar"></a>
+            </div>
+            <div id=dois>
+                <p>
+                        <input type="button" name="confirmar" value="Confirmar" alt="confirmar">
+                </p>
+            </div>    
+        </div>    
+        <br>
+        <br>
+
+    
+    </form> 
+</div>
+<script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-bars");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+
+    </script>
+<section>
+        <div id=rodapé>
+                <footer>
+                    <address>
+                        Avenida de Limeira, 539 - Campo Elìseos - SP 
+                        <br>
+                        Roletop@gmail.com
+                        <br>
+                        Tel: 11 958623-5555
+                    </address>
+                </footer>
+        </div>
+</section>
+        </body>
+        </html>

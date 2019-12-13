@@ -1,0 +1,97 @@
+<main>
+
+        <div id="gradient">
+            <script type="text/javascript" src="~/js/login.js"></script>
+
+            <section id=menu>
+                <header>
+            </header>
+        </section>
+        
+        <div class="formu">
+            <br>
+            <br>
+            <form action='@Url.Action("Login","Cliente")' method="POST">
+                <div id=lon>
+                    <h1>Login</h1>
+                    <p>Email:</p>
+                    <p class="email">
+                        <input type="email" name="email" placeholder="Roletop@gmail.com" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>Senha:</p>
+                    <p class="Senha">
+                        <input type="password" name="senha" placeholder="*********" required="required">
+                    </p>
+                    <br>
+                    <p class="enviar">
+                        <input type="submit" name="enviar" value="Enviar">
+                    </p>
+                    <br>
+                </div>
+            </form>
+
+            <form method="POST" action='@Url.Action("CadastroCliente", "Cadastro")'>
+
+                <div id=cadas>
+                    <h1>Cadastro</h1>
+                    
+                    <p>Nome:</p>
+                    <p class="nome">
+                        <input type="text" name="nome" placeholder="José Silva Filho" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>Idade:</p>
+                    <p class="idade">
+                        <input type="text" name="idade" placeholder="10/03/2000" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>Email:</p>
+                    <p class="email">
+                        <input type="email" name="email" placeholder="Roletop@gmail.com" required="required">
+                    </p>
+                    
+                    
+                    <br>
+                    <p>Telefone:</p>
+                    <p class="telefone">
+                        <input type="tel" name="telefone" placeholder="1199999-9999" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>Endereço:</p>
+                    <p class="Endereco">
+                        <input type="text" name="endereco" placeholder="Rua luiz Paulo, 121" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>CPF:</p>
+                    <p class="CPF">
+                        <input type="adress" name="CPF" placeholder="448596251-37" required="required">
+                    </p>
+                    
+                    <br>
+                    <p>Senha:</p>
+                    <p class="Senha">
+                        <input type="password" name="senha" placeholder="*********" required="required">
+                    </p>
+                    
+                    <br>
+                    <p class="enviar">
+                        <input type="submit" name="enviar" value="Enviar">
+                    </p>
+                    
+                    <br>
+            </form>
+                </div>
+            
+        </div>
+        
+        <br>
+        
+        
+        
+    </main>
